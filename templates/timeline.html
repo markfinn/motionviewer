@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+{{ interval }}
+<ul class=entries>
+{% for f in files %}
+    <li>{{ f }}
+  {% else %}
+    <li><em>no entries</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
+

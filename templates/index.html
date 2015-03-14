@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<ul class=entries>
+{% for p in periods %}
+    <li><a href="{{ url_for('interval')+'/'+p }}">{{ p }}</a>
+  {% else %}
+    <li><em>no entries</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
+
